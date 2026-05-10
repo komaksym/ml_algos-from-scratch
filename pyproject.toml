@@ -1,0 +1,32 @@
+[project]
+name = "ml-algos-from-scratch"
+version = "0.1.0"
+description = "Classic machine learning algorithms from scratch for junior ML engineer interview prep."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.4.4",
+    "torch>=2.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+    "pre-commit-hooks>=6.0.0",
+    "prek>=0.3.13",
+    "ruff>=0.14.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+extend-exclude = [
+    ".ipynb_checkpoints",
+    ".venv",
+    "checkpoints",
+    "data",
+    "runs",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

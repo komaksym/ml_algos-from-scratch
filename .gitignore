@@ -1,0 +1,34 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local ML artifacts
+data/
+runs/
+checkpoints/
+*.ckpt
+*.onnx
+*.pt
+*.pth
+
+# OS-specific
+.DS_Store
+
+# IDE-specific
+.vscode
