@@ -6,7 +6,8 @@ Small Python workspace for implementing classic ML and PyTorch interview exercis
 
 ```bash
 uv sync --group dev
-uv run prek install --overwrite
+uv run prek install --overwrite --hook-type pre-commit
+uv run prek install --overwrite --hook-type commit-msg
 ```
 
 `prek` is the installed Git hook runner because it is fast. The same hook config also works with `pre-commit`.
@@ -17,6 +18,8 @@ uv run prek install --overwrite
 uv run prek run --all-files
 uv run pre-commit run --all-files
 ```
+
+Commit messages are checked with Commitizen, so use conventional commits like `feat: add feedforward block` or `fix: correct tensor shape`.
 
 Direct Ruff checks:
 

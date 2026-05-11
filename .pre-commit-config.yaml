@@ -42,3 +42,9 @@ repos:
         entry: uv run --frozen check-added-large-files --maxkb=1024
         language: system
         pass_filenames: false
+
+      - id: commitizen
+        name: commitizen check
+        entry: uv run --frozen cz check --allow-abort --commit-msg-file
+        language: system
+        stages: [commit-msg]
