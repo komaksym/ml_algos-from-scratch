@@ -28,8 +28,10 @@ def adam_optimizer(
     """
     m_t = beta1 * m + (1 - beta1) * grad
     v_t = beta2 * v + (1 - beta2) * grad**2
+
     m_hat = m_t / (1 - beta1**t)
     v_hat = v_t / (1 - beta2**t)
+
     parameter -= learning_rate * (m_hat / (np.sqrt(v_hat) + epsilon))
 
     return np.round(parameter, 5), np.round(m_t, 5), np.round(v_t, 5)
